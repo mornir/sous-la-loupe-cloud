@@ -6,29 +6,26 @@
     <script src="./d3.layout.cloud.js"></script>
     <script src="./d3.wordcloud.js"></script>
     <script src="./example.words.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      #cloud {
+        overflow: hidden;
+        width: 100vw;
+      }
+    </style>
   </head>
   <body style="text-align: center">
-    <h1>Word Cloud</h1>
     <div id="wordcloud"></div>
-    <p>
-      This is a word cloud of the first two chapters of Oliver Twist. Some words
-      are clickable.
-    </p>
-    <p>
-      <a href="https://github.com/wvengen/d3-wordcloud"
-        >https://github.com/wvengen/d3-wordcloud</a
-      >
-    </p>
-
     <svg
       version="1.1"
       id="svg2"
       width="186.52"
       height="87.333336"
       viewBox="0 0 186.52 87.333336"
-      sodipodi:docname="sous_la_loupe_LOGO_1.eps"
-      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:svg="http://www.w3.org/2000/svg"
     >
@@ -132,22 +129,7 @@
           />
         </linearGradient>
       </defs>
-      <sodipodi:namedview
-        id="namedview4"
-        pagecolor="#ffffff"
-        bordercolor="#000000"
-        borderopacity="0.25"
-        inkscape:showpageshadow="2"
-        inkscape:pageopacity="0.0"
-        inkscape:pagecheckerboard="0"
-        inkscape:deskcolor="#d1d1d1"
-      />
-      <g
-        id="g8"
-        inkscape:groupmode="layer"
-        inkscape:label="ink_ext_XXXXXX"
-        transform="matrix(1.3333333,0,0,-1.3333333,0,87.333333)"
-      >
+      <g id="g8" transform="matrix(1.3333333,0,0,-1.3333333,0,87.333333)">
         <g id="g10" transform="scale(0.1)">
           <path
             d="m 5.04688,332.652 c 0.00781,0.215 10.44922,-18.199 29.10542,-23.039 11.504,-2.89 21.7461,4.617 21.7461,23.934 -0.1015,39.57 -51.89059,31.004 -51.78121,71.305 0,22.023 14.00781,37.875 30.03511,42.652 19.2461,5.617 28.0079,-9.332 28,-9.441 -1.582,-3.895 -3.1601,-7.735 -4.7382,-11.52 0.0039,0.09 -7.7969,13.086 -23.8282,9.117 C 22.8477,433.02 12.3516,423.59 12.3516,406.785 12.2461,373.27 64.1445,385.781 64.2461,332.461 64.2539,306.742 51.3047,292.715 33.9688,297.953 11.1719,304.922 0.0117188,325.891 0,325.617 c 1.67969,2.285 3.36328,4.629 5.04688,7.035"
@@ -290,9 +272,11 @@
         </g>
       </g>
     </svg>
+
     <script>
+      //document.body.clientWidth
       d3.wordcloud()
-        .size([document.body.clientWidth, 400])
+        .size([2000, 300])
         .fill(
           d3.scale.ordinal().range(['#884400', '#448800', '#888800', '#444400'])
         )
