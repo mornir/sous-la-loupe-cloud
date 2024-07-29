@@ -22,11 +22,9 @@
     <div id="wordcloud"></div>
 
     <script>
-      //document.body.clientWidth
       d3.wordcloud()
         .size([2000, 300])
         .fill(
-          // d3.scale.ordinal().range(['#884400', '#448800', '#888800', '#444400'])
           d3.scale.ordinal().range(['#0b72b5', '#D38C56', '#757575', '#444400'])
         )
         .words(words)
