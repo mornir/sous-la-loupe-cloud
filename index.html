@@ -6,21 +6,9 @@
     <script src="./d3.layout.cloud.js"></script>
     <script src="./d3.wordcloud.js"></script>
     <script src="./example.words.js"></script>
-    <style>
-      body {
-        margin: 0;
-        overflow: hidden;
-      }
-
-      #cloud {
-        overflow: hidden;
-        width: 100vw;
-      }
-    </style>
   </head>
   <body style="text-align: center">
     <div id="wordcloud"></div>
-
     <script>
       d3.wordcloud()
         .size([2000, 300])
