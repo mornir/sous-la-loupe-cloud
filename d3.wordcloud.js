@@ -127,6 +127,9 @@
         .style('fill', function (d) {
           return fill(d.text.toLowerCase())
         })
+        .attr('id', function (d) {
+          return d.href
+        })
         .text(function (d) {
           return d.text
         })
