@@ -116,10 +116,6 @@
         .style('font-size', function (d) {
           return d.size + 'px'
         })
-        .style('opacity', 1e-6)
-        .transition()
-        .duration(transitionDuration)
-        .style('opacity', 1)
       text
         .style('font-family', function (d) {
           return d.font || layout.font() || svg.style('font-family')
@@ -134,9 +130,6 @@
           return d.text
         })
         // clickable words
-        .style('cursor', function (d, i) {
-          if (onwordclick !== undefined) return 'pointer'
-        })
         .on('mouseover', function (d, i) {
           if (onwordclick !== undefined) {
             d3.select(this)
